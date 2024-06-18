@@ -1,5 +1,7 @@
 PODS:
   - boost (1.76.0)
+  - ClaySDK (2.0.2):
+    - VirgilCrypto (= 7.0.1)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.71.6)
@@ -414,12 +416,20 @@ PODS:
     - React-logger (= 0.71.6)
     - React-perflogger (= 0.71.6)
   - SocketRocket (0.6.1)
+  - VirgilCrypto (7.0.1):
+    - VirgilCryptoFoundation (= 0.17.1)
+  - VirgilCryptoFoundation (0.17.1):
+    - VSCCrypto/Common (= 0.17.1)
+    - VSCCrypto/Foundation (= 0.17.1)
+  - VSCCrypto/Common (0.17.1)
+  - VSCCrypto/Foundation (0.17.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
+  - ClaySDK (from `https://gitlab.com/claysolutions/public/clay-sdk-artefacts`, tag `2.0.2`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -480,6 +490,10 @@ DEPENDENCIES:
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - VirgilCrypto
+    - VirgilCryptoFoundation
+    - VSCCrypto
   trunk:
     - CocoaAsyncSocket
     - Flipper
@@ -500,6 +514,9 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
+  ClaySDK:
+    :git: https://gitlab.com/claysolutions/public/clay-sdk-artefacts
+    :tag: 2.0.2
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -567,8 +584,14 @@ EXTERNAL SOURCES:
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
+CHECKOUT OPTIONS:
+  ClaySDK:
+    :git: https://gitlab.com/claysolutions/public/clay-sdk-artefacts
+    :tag: 2.0.2
+
 SPEC CHECKSUMS:
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
+  ClaySDK: f7ca113f8d3f22dcd50d9bb41134c4babdd7db63
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: a83ceaa8a8581003a623facdb3c44f6d4f342ac5
@@ -615,9 +638,12 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 8692ac548bec648fa121980ccb4304afd136d584
   ReactCommon: 0c43eaeaaee231d7d8dc24fc5a6e4cf2b75bf196
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  VirgilCrypto: 66f971b18ee7f00890ab8e81fd1c9a1852145a73
+  VirgilCryptoFoundation: f6ed7b0447f0eac9f5cd9a8b3b9756691d78c2f8
+  VSCCrypto: 52f9ba06701cc19b8285b44659cccb48b6e7ceb0
   Yoga: ba09b6b11e6139e3df8229238aa794205ca6a02a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 8b49df092c931f5fac474423a21444be8e491dcd
+PODFILE CHECKSUM: 6f29b98f3afa96996acb3cdb37f64dc33ceb14fc
 
 COCOAPODS: 1.15.2
